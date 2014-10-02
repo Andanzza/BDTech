@@ -7,7 +7,7 @@
 <TextView  
     android:layout_width="fill_parent" 
     android:layout_height="wrap_content" 
-    android:text="hello"
+    android:text="Olá"
     />
 <TextView 
     android:id="@+id/bluetoothstate" 
@@ -22,13 +22,13 @@
 <TextView
     android:layout_width="fill_parent" 
     android:layout_height="wrap_content" 
-    android:text="Set Discoverable Duration" 
+    android:text="Defina a duração da visibilidade" 
     />
 <Button
     android:id="@+id/scandevice" 
     android:layout_width="fill_parent" 
     android:layout_height="wrap_content"
-    android:text="Scan Bluetooth Devices" 
+    android:text="Procurar dispositivos Bluetooth" 
     android:enabled="false"
     /> 
 <ListView

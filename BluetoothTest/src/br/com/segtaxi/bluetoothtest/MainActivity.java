@@ -45,7 +45,7 @@ public class MainActivity extends Activity {
     	  findBtn.setEnabled(false);
     	  text.setText("Status: not supported");
     	  
-    	  Toast.makeText(getApplicationContext(),"Your device does not support Bluetooth",
+    	  Toast.makeText(getApplicationContext(),"Seu dispositivos não possui suporte para Bluetooth",
          		 Toast.LENGTH_LONG).show();
       } else {
 	      text = (TextView) findViewById(R.id.text);
@@ -102,11 +102,11 @@ public class MainActivity extends Activity {
          Intent turnOnIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
          startActivityForResult(turnOnIntent, REQUEST_ENABLE_BT);
 
-         Toast.makeText(getApplicationContext(),"Bluetooth turned on" ,
+         Toast.makeText(getApplicationContext(),"Bluetooth ligado" ,
         		 Toast.LENGTH_LONG).show();
       }
       else{
-         Toast.makeText(getApplicationContext(),"Bluetooth is already on",
+         Toast.makeText(getApplicationContext(),"Bluetooth já está ligado",
         		 Toast.LENGTH_LONG).show();
       }
    }
@@ -116,9 +116,9 @@ public class MainActivity extends Activity {
 	   // TODO Auto-generated method stub
 	   if(requestCode == REQUEST_ENABLE_BT){
 		   if(myBluetoothAdapter.isEnabled()) {
-			   text.setText("Status: Enabled");
+			   text.setText("Status: Habilitado");
 		   } else {   
-			   text.setText("Status: Disabled");
+			   text.setText("Status: Desabilitado");
 		   }
 	   }
    }
@@ -131,7 +131,7 @@ public class MainActivity extends Activity {
       for(BluetoothDevice device : pairedDevices)
     	  BTArrayAdapter.add(device.getName()+ "\n" + device.getAddress());
 
-      Toast.makeText(getApplicationContext(),"Show Paired Devices",
+      Toast.makeText(getApplicationContext(),"Listar Dispositivos Pareados",
     		  Toast.LENGTH_SHORT).show();
       
    }
@@ -167,7 +167,7 @@ public class MainActivity extends Activity {
 	  myBluetoothAdapter.disable();
 	  text.setText("Status: Disconnected");
 	  
-      Toast.makeText(getApplicationContext(),"Bluetooth turned off",
+      Toast.makeText(getApplicationContext(),"Bluetooth desligado",
     		  Toast.LENGTH_LONG).show();
    }
    
